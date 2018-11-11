@@ -9,7 +9,7 @@ class App extends Component {
       <Router>
         <div>
           <NavBar />
-          <Route name="page" exact path="/" component={Page} />
+          <Route name='page' exact path='/' component={Page} />
         </div>
       </Router>
     )

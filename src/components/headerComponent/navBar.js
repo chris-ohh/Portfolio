@@ -5,14 +5,33 @@ import { Link } from 'react-router-dom';
 
 
 class NavBar extends Component {
-  state = { activeItem: 'home' }
+
+  constructor(props) {
+    super(props);
+    this.state = { activeItem: 'home' };
+    this.prevScrollpos = window.pageYOffset;
+  }
+
+  componentDidMount() {
+
+    window.addEventListener('scroll', () => {
+      var currentScrollPos = window.pageYOffset;
+      console.log(currentScrollPos);
+      if (this.prevScrollpos > currentScrollPos) {
+        document.querySelector('header').style.top = "0";
+      } else {
+        document.querySelector('header').style.top = "-50px";
+      }
+      this.prevScrollpos = currentScrollPos;
+    })
+  }
 
   render() {
-    const { activeItem } = this.state
+    //const { activeItem } = this.state;
 
     return (
       <header>
-        <ul id="headerButtons">
+        <ul className='navBar'>
           <li className="navButton"><Link to="">About</Link></li>
           <li className="navButton"><Link to="">Projects</Link></li>
           <li className="navButton"><Link to="">Education</Link></li>
