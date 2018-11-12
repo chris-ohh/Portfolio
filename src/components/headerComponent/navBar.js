@@ -31,13 +31,11 @@ class NavBar extends Component {
 
     return (
       <header>
-        <ul className='navBar'>
-          <li className="navButton"><Link to="">About</Link></li>
-          <li className="navButton"><Link to="">Projects</Link></li>
-          <li className="navButton"><Link to="">Education</Link></li>
-          <li className="navButton"><Link to="">Skills</Link></li>
-          <li className="navButton"><Link to="">Interests</Link></li>
-        </ul>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#interests">Interests</a>
       </header>
     )
   }
