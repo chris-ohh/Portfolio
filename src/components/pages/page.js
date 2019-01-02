@@ -10,7 +10,6 @@ class Page extends Component {
         <SimpleCard></SimpleCard>
         <SimpleCard></SimpleCard>
         <SimpleCard></SimpleCard>
-        <SimpleCard></SimpleCard>
         Projects</div>
         <div id="education">Education</div>
         <div id="skills">Skills</div>
