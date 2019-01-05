@@ -7,10 +7,16 @@ class Page extends Component {
       <div className="page">
         <div id="about">About</div>
         <div id="projects">
-        <SimpleCard></SimpleCard>
-        <SimpleCard></SimpleCard>
-        <SimpleCard></SimpleCard>
-        Projects</div>
+          <div id="card-container">
+            <SimpleCard></SimpleCard>
+            <SimpleCard></SimpleCard>
+            <SimpleCard></SimpleCard>
+            <SimpleCard></SimpleCard>
+            <SimpleCard></SimpleCard>
+            <SimpleCard></SimpleCard>
+            <SimpleCard></SimpleCard>
+          </div>
+        </div>
         <div id="education">Education</div>
         <div id="skills">Skills</div>
         <div id="interests">Interests</div>
