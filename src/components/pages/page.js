@@ -8,14 +8,13 @@ class Page extends Component {
         <div id="about">About</div>
         <div id="projects">
           <div id="card-container">
-            <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.'></SimpleCard>
-            <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.'></SimpleCard>
-            <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.'></SimpleCard>
-            <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.'></SimpleCard>
-            <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.'></SimpleCard>
-            <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.'></SimpleCard>
-            <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.'></SimpleCard>
-            <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.'></SimpleCard>
+            <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.' url='https://github.com/zhime/Friendr'></SimpleCard>
+            <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.' url='https://github.com/zhime/Friendr'></SimpleCard>
+            <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.' url='https://github.com/zhime/Friendr'></SimpleCard>
+            <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.' url='https://github.com/zhime/Friendr'></SimpleCard>
+            <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.' url='https://github.com/zhime/Friendr'></SimpleCard>
+            <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.' url='https://github.com/zhime/Friendr'></SimpleCard>
+            <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.' url='https://github.com/zhime/Friendr'></SimpleCard>
           </div>
         </div>
         <div id="education">Education</div>

@@ -27,8 +27,11 @@ const styles = {
 };
 
 function SimpleCard(props) {
-  const { classes, title, description } = props;
+  const { classes, title, description, url } = props;
   const bull = <span className={classes.bullet}>•</span>;
+  const buttonClick = () => {
+    window.open(url);
+  }
 
   return (
     <Card className={classes.card}>
@@ -41,7 +44,7 @@ function SimpleCard(props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Link</Button>
+        <Button size="small" onClick={buttonClick}>Link</Button>
       </CardActions>
     </Card>
   );
