@@ -27,27 +27,21 @@ const styles = {
 };
 
 function SimpleCard(props) {
-  const { classes } = props;
+  const { classes, title, description } = props;
   const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <Card className={classes.card}>
       <CardContent>
         <Typography variant="h5" component="h2">
-          Friendr
+          {title}
         </Typography>
         <Typography component="p">
-        -Tinder-like app for platonic relationships.
-        </Typography>
-        <Typography component="p">
-        -MongoDB, GraphQL, Express/React stack.
-        </Typography>
-        <Typography component="p">
-        -Under construction
+          {description}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Learn More</Button>
+        <Button size="small">Link</Button>
       </CardActions>
     </Card>
   );
