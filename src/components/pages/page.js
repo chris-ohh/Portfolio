@@ -2,6 +2,15 @@ import React, { Component } from 'react';
 import SimpleCard from './SimpleCard';
 
 class Page extends Component {
+
+  componentDidMount() {
+    window.addEventListener('resize', console.log('resized'));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', console.log('resized'));
+  }
+
   render() {
     return (
       <div className="page">
