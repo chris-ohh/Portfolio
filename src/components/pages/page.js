@@ -6,11 +6,17 @@ class Page extends Component {
   onresize() {
     var projectDiv = document.querySelector('#projects');
     var containerDiv = document.querySelector('#card-container');
-    var height = projectDiv.clientHeight;
     var width = containerDiv.clientWidth;
     var numCards = 7;
     var cardWidth = 325;
     var columns = Math.floor(width/cardWidth);
+    var rows = Math.ceil(numCards/columns);
+
+    if(rows * (230 + 20) > window.innerHeight) {
+      projectDiv.style.height = (rows * (230 + 20)).toString()+'px';
+    } else {
+      projectDiv.style.height = '100vh';
+    }
 
     if(window.innerWidth > 1280) {
       containerDiv.style.width = '1150px';
