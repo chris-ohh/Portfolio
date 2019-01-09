@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 const styles = {
   card: {
     width: 305,
+    height: 230,
     margin: 10,
     display: 'inline-block',
   },

@@ -3,12 +3,29 @@ import SimpleCard from './SimpleCard';
 
 class Page extends Component {
 
+  onresize() {
+    var projectDiv = document.querySelector('#projects');
+    var containerDiv = document.querySelector('#card-container');
+    var height = projectDiv.clientHeight;
+    var width = containerDiv.clientWidth;
+    var numCards = 7;
+    var cardWidth = 325;
+    var columns = Math.floor(width/cardWidth);
+
+    if(window.innerWidth > 1280) {
+      containerDiv.style.width = '1150px';
+    } else {
+      containerDiv.style.width = (window.innerWidth).toString()+'px';
+    }
+  }
+
   componentDidMount() {
-    window.addEventListener('resize', console.log('resized'));
+    this.onresize();
+    window.addEventListener('resize', this.onresize);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('resize', console.log('resized'));
+    window.removeEventListener('resize', this.onresize);
   }
 
   render() {
