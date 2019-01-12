@@ -16,7 +16,7 @@ class NavBar extends Component {
 
     window.addEventListener('scroll', () => {
       var currentScrollPos = window.pageYOffset;
-      //console.log(currentScrollPos);
+
       if (this.prevScrollpos > currentScrollPos) {
         document.querySelector('header').style.top = "0";
       } else {

@@ -3,35 +3,69 @@ import SimpleCard from './SimpleCard';
 
 class Page extends Component {
 
-  onresize() {
+  componentDidMount() {
+
     var projectDiv = document.querySelector('#projects');
     var containerDiv = document.querySelector('#card-container');
-    var width = containerDiv.clientWidth;
-    var numCards = 7;
-    var cardWidth = 325;
-    var columns = Math.floor(width/cardWidth);
-    var rows = Math.ceil(numCards/columns);
+    var aboutDiv = document.querySelector('#about');
+    var educationDiv = document.querySelector('#education');
+    var color = ``;
 
-    if(rows * (230 + 20) > window.innerHeight) {
-      projectDiv.style.height = (rows * (230 + 20)).toString()+'px';
-    } else {
-      projectDiv.style.height = '100vh';
+    var onResize = () => {
+      var width = containerDiv.clientWidth;
+      var numCards = 7;
+      var cardWidth = 325;
+      var columns = Math.floor(width/cardWidth);
+      var rows = Math.ceil(numCards/columns);
+
+      //console.log('projectDiv\'s position: '+projectDiv.offsetTop);
+
+      if(rows * (230 + 20) > window.innerHeight) {
+        projectDiv.style.height = (rows * (230 + 20)).toString()+'px';
+      } else {
+        projectDiv.style.height = '100vh';
+      }
+
+      if(window.innerWidth > 1280) {
+        containerDiv.style.width = '1150px';
+      } else {
+        containerDiv.style.width = (window.innerWidth).toString()+'px';
+      }
     }
 
-    if(window.innerWidth > 1280) {
-      containerDiv.style.width = '1150px';
-    } else {
-      containerDiv.style.width = (window.innerWidth).toString()+'px';
+    var onScroll = () => {
+
+      //console.log('scroll position: '+window.pageYOffset);
+
+      var currentScrollPos = window.pageYOffset;
+
+      if(currentScrollPos < projectDiv.offsetTop - 125) {
+        color = `rgb(201, 76, 76)`;
+      }else if(currentScrollPos >= projectDiv.offsetTop - 125 &&
+               currentScrollPos < projectDiv.offsetTop) {
+                 //transition
+        color = `rgb(${76 + projectDiv.offsetTop - currentScrollPos},
+          ${201 - (projectDiv.offsetTop - currentScrollPos)}, 76)`;
+      }else if(currentScrollPos >= projectDiv.offsetTop &&
+               currentScrollPos < educationDiv.offsetTop - 125) {
+        color = `rgb(76, 201, 76)`;
+      }else if(currentScrollPos >= educationDiv.offsetTop - 125 &&
+               currentScrollPos < educationDiv.offsetTop) {
+                 //transition
+        color = `rgb(76, ${76 + educationDiv.offsetTop - currentScrollPos},
+          ${201 - (educationDiv.offsetTop - currentScrollPos)})`;
+      }else if(currentScrollPos >= educationDiv.offsetTop) {
+        color = `rgb(76, 76, 201)`;
+      }
+
+      aboutDiv.style.background = color;
+      projectDiv.style.background = color;
+      educationDiv.style.background = color;
     }
-  }
 
-  componentDidMount() {
-    this.onresize();
-    window.addEventListener('resize', this.onresize);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.onresize);
+    onResize();
+    window.addEventListener('resize', onResize);
+    window.addEventListener('scroll', onScroll);
   }
 
   render() {
