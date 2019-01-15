@@ -9,6 +9,7 @@ class Page extends Component {
     var containerDiv = document.querySelector('#card-container');
     var aboutDiv = document.querySelector('#about');
     var educationDiv = document.querySelector('#education');
+    var aboutText = document.querySelector('#about-text');
     var color = ``;
 
     var onResize = () => {
@@ -30,6 +31,10 @@ class Page extends Component {
         containerDiv.style.width = '1150px';
       } else {
         containerDiv.style.width = (window.innerWidth).toString()+'px';
+      }
+
+      if(aboutText.offsetHeight > window.innerHeight) {
+        aboutDiv.style.height = (aboutText.offsetHeight + 400).toString()+'px';
       }
     }
 
@@ -71,7 +76,13 @@ class Page extends Component {
   render() {
     return (
       <div className="page">
-        <div id="about">About</div>
+        <div id="about">
+          <div id="about-container">
+            <p id="about-text">
+              kjhlkj
+            </p>
+          </div>
+        </div>
         <div id="projects">
           <div id="card-container">
             <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.' url='https://github.com/zhime/Friendr'></SimpleCard>

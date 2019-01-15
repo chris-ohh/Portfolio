@@ -78,3 +78,18 @@ header a {
   margin: 0 auto;
   text-align: center;
 }
+
+#about-container {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 200px;
+}
+
+#about-text {
+  background-image: url(https://i.imgur.com/POrARlx.png);
+  background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-background-size: cover;
+  font-size: 36px;
+}
