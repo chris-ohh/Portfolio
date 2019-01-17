@@ -53,24 +53,17 @@ header a {
   display: inline-block;
 }
 
-#education {
+#skills {
   background:rgb(201, 76, 76);
   float:left;
   height:100vh;
   width:100vw;
 }
 
-#skills {
+#contact {
   background:#b9ffcb;
   float:right;
-  height:100vh;
-  width:100vw;
-}
-
-#interests {
-  background:#a590f0;
-  float:right;
-  height:100vh;
+  height:30vh;
   width:100vw;
 }
 
@@ -82,14 +75,18 @@ header a {
 #about-container {
   margin: 0 auto;
   text-align: center;
-  padding-top: 200px;
+  padding-top: 5em;
 }
 
 #about-text {
-  background-image: url(https://i.imgur.com/POrARlx.png);
+  font-size: 18px;
+  padding: 30px;
+}
+
+.gold {
+  background-image: url(https://t3.ftcdn.net/jpg/01/21/77/78/240_F_121777813_2D9oUTeYerqVNeJfNGd9btI3BO9JnfDg.jpg);
   background-attachment: fixed;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-background-size: cover;
-  font-size: 36px;
 }
