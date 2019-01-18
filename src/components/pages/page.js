@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SimpleCard from './SimpleCard';
+import Typography from '@material-ui/core/Typography';
 
 class Page extends Component {
 
@@ -10,7 +11,7 @@ class Page extends Component {
     var aboutContainer = document.querySelector('#about-container');
     var aboutDiv = document.querySelector('#about');
     var skillsDiv = document.querySelector('#skills');
-    var aboutText = document.querySelector('#about-text');
+    var contactDiv = document.querySelector('#contact');
     var color = ``;
 
     var onResize = () => {
@@ -21,6 +22,9 @@ class Page extends Component {
       var rows = Math.ceil(numCards/columns);
 
       //console.log('projectDiv\'s position: '+projectDiv.offsetTop);
+      //console.log('aboutContainer height: '+aboutContainer.offsetHeight);
+      //console.log('window height: '+window.innerHeight);
+      //console.log('aboutDiv height: '+aboutDiv.offsetHeight);
 
       if(rows * (230 + 20) > window.innerHeight) {
         projectDiv.style.height = (rows * (230 + 20)).toString()+'px';
@@ -28,8 +32,10 @@ class Page extends Component {
         projectDiv.style.height = '100vh';
       }
 
-      if(aboutText.offsetHeight > window.innerHeight) {
-        aboutDiv.style.height = (aboutText.offsetHeight + 400).toString()+'px';
+      if(aboutContainer.offsetHeight > window.innerHeight) {
+        aboutDiv.style.height = (aboutContainer.offsetHeight).toString()+'px';
+      }else {
+        aboutDiv.style.height = window.offsetHeight;
       }
 
       if(window.innerWidth > 770) {
@@ -71,6 +77,7 @@ class Page extends Component {
       aboutDiv.style.background = color;
       projectDiv.style.background = color;
       skillsDiv.style.background = color;
+      contactDiv.style.background = color;
     }
 
     onResize();
@@ -83,23 +90,21 @@ class Page extends Component {
       <div className="page">
         <div id="about">
           <div id="about-container">
-            <h1 className="gold">
+            <Typography className="gold" component="h3" variant="h3" align="center" gutterBottom>
               I'm Chris, welcome to my page!
-            </h1>
-            <p id="about-text" className="gold">
-            Tenolim tace obefac! Dok has atol iha yatine ewata lide asetiyet. Cilieg umaseti ritane cev. Vadu pi de siloh penek do! Ceyesieg neye mudabo momin. Lef ra tev mesegel tas socobie nin: Rene sunene magocef tenen lilawat nafefol loris detep. Abanasa eranociew me wiherol enirasep pinir fi ritie elo.
-
-Rulonien nepom miwumad udirotor. Ciecapel sorog adehani dedarad tagi. Laleceb nis lon edete de alen, ca eneg wepi cizi. Pe anarimi soq pap mafiere nika. Jero dacane ro dod oyadub hise nurad hana pes! Oratelie lebexal miela. Yef ru yuxotie aleguser wiy ievesifad yiro ici. Irace her cacela nesaga sulanie etiero fietihan merimie eca ateg! Tir dido niratat net anilepas ner to. Mopad rasekos pipokug lorem sapimem ra bayono yu! Rec timimes hosel norule te abopucet punehe! Tic hevod napita ibil! Dep motic velesi, ocidel reho mibi cah benagec fi loge digari rol tetetob. Tof duca ikap.
-
-Ierin suney gevu suceyar tudacel nacunot apap enasa osinuci: Nu yec rirarak usutu radel iveyo. Teperaf nura relil tietecu lobes nonicid apetu patayo memisir? Menati uye enie yis luten se ci. Rar cegen ciredi epi velal riehece higaret yon gesava. Tivu fidahem ranup, senutur gavid lagir dihi orucu ya. La nasite pirop. Curere pusu pori nav corir te fod cah! Aranite atiriset luy yihelom zofacec ma relut vekom mesel tel. Opiso lucecon nilemic eseniemir: Roru sosuzel datode cesela setol ceneret neheh! Ru car inobal! Rirulih ded livenat deciti ayacilex ba nelin bu? Waniyoc fitulo gar ribe. Mas tonah esuhie riene: Ro milierat pec ze inus lite. Yisetid de ininod esecici! Cal pudeled lula bacasic elunew ke cituxug tivie ecewivu sapeba. Ile enek vacu gesuro sarocac.
-            </p>
+            </Typography>
+            <Typography id="about-text" className="gold" variant="body1" align="center" gutterBottom>
+        body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
+        unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
+        dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
+            </Typography>
           </div>
         </div>
         <div id="projects">
           <div id="card-container">
-          <h1 className="gold">
+          <Typography className="gold" component="h3" variant="h3" align="center" gutterBottom>
             Projects
-          </h1>
+          </Typography>
             <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.' url='https://github.com/zhime/Friendr'></SimpleCard>
             <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.' url='https://github.com/zhime/Friendr'></SimpleCard>
             <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.' url='https://github.com/zhime/Friendr'></SimpleCard>
@@ -110,14 +115,14 @@ Ierin suney gevu suceyar tudacel nacunot apap enasa osinuci: Nu yec rirarak usut
           </div>
         </div>
         <div id="skills">
-          <h1 className="gold">
+          <Typography className="gold" component="h3" variant="h3" align="center" gutterBottom>
             Skills
-          </h1>
+          </Typography>
         </div>
         <div id="contact">
-          <h1 className="gold">
+          <Typography className="gold" component="h3" variant="h3" align="center" gutterBottom>
             Contact Me
-          </h1>
+          </Typography>
         </div>
       </div>
 
