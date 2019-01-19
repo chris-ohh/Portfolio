@@ -39,14 +39,14 @@ header a {
 }
 
 #about {
-  background:rgb(201, 76, 76);
+  background:rgb(49, 140, 231);
   float:left;
   height:90vh;
   width:100vw;
 }
 
 #projects {
-  background:rgb(201, 76, 76);
+  background:rgb(49, 140, 231);
   float:right;
   height:90vh;
   width:100vw;
@@ -54,7 +54,7 @@ header a {
 }
 
 #skills {
-  background:rgb(201, 76, 76);
+  background:rgb(49, 140, 231);
   float:left;
   height:90vh;
   width:100vw;
@@ -79,8 +79,13 @@ header a {
 }
 
 #about-text {
-  font-size: 18px;
+  font-size: 30px;
   padding: 30px;
+}
+
+#skills-container {
+  font-size: 18px;
+  padding: 5vw;
 }
 
 .gold {
@@ -91,17 +96,21 @@ header a {
   -webkit-background-size: cover;
 }
 
-.row {
+.skills-row {
+  width: 90vw;
+}
+
+.contact-row {
   width: 100vw;
 }
 
 .language {
-  width: 50vw;
+  width: 45vw;
   display: inline-block;
 }
 
 .framework {
-  width: 50vw;
+  width: 45vw;
   display: inline-block;
 }
 

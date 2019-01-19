@@ -6,7 +6,6 @@ import Link from '@material-ui/core/Link';
 class Page extends Component {
 
   componentDidMount() {
-
     var projectDiv = document.querySelector('#projects');
     var projectContainer = document.querySelector('#card-container');
     var aboutContainer = document.querySelector('#about-container');
@@ -24,11 +23,11 @@ class Page extends Component {
 
       //console.log('projectDiv\'s position: '+projectDiv.offsetTop);
       //console.log('aboutContainer height: '+aboutContainer.offsetHeight);
-      //console.log('window height: '+window.innerHeight);
+      //console.log('window width: '+window.innerWidth);
       //console.log('aboutDiv height: '+aboutDiv.offsetHeight);
 
-      if(rows * (230 + 20) > window.innerHeight) {
-        projectDiv.style.height = (rows * (230 + 20)).toString()+'px';
+      if(rows * (230 + 40) > window.innerHeight) {
+        projectDiv.style.height = (rows * (230 + 40)).toString()+'px';
       } else {
         projectDiv.style.height = '100vh';
       }
@@ -43,6 +42,8 @@ class Page extends Component {
         aboutContainer.style.width = '770px';
         if(window.innerWidth > 1280) {
           projectContainer.style.width = '1150px';
+        } else {
+          projectContainer.style.width = (window.innerWidth).toString()+'px';
         }
       } else {
         projectContainer.style.width = (window.innerWidth).toString()+'px';
@@ -56,23 +57,25 @@ class Page extends Component {
 
       var currentScrollPos = window.pageYOffset;
 
-      if(currentScrollPos < projectDiv.offsetTop - 125) {
-        color = `rgb(201, 76, 76)`;
-      }else if(currentScrollPos >= projectDiv.offsetTop - 125 &&
+      if(currentScrollPos < projectDiv.offsetTop - 200) {
+        color = `rgb(49, 140, 231)`;
+      }else if(currentScrollPos >= projectDiv.offsetTop - 200 &&
                currentScrollPos < projectDiv.offsetTop) {
                  //transition
-        color = `rgb(${76 + projectDiv.offsetTop - currentScrollPos},
-          ${201 - (projectDiv.offsetTop - currentScrollPos)}, 76)`;
+        color = `rgb(${Math.floor(16 + (33/200)*(projectDiv.offsetTop - currentScrollPos))},
+          ${Math.floor(52 + (88/200)*(projectDiv.offsetTop - currentScrollPos))},
+          ${Math.floor(166 + (65/200)*(projectDiv.offsetTop - currentScrollPos))})`;
       }else if(currentScrollPos >= projectDiv.offsetTop &&
-               currentScrollPos < skillsDiv.offsetTop - 125) {
-        color = `rgb(76, 201, 76)`;
-      }else if(currentScrollPos >= skillsDiv.offsetTop - 125 &&
+               currentScrollPos < skillsDiv.offsetTop - 200) {
+        color = `rgb(16, 52, 166)`;
+      }else if(currentScrollPos >= skillsDiv.offsetTop - 200 &&
                currentScrollPos < skillsDiv.offsetTop) {
                  //transition
-        color = `rgb(76, ${76 + skillsDiv.offsetTop - currentScrollPos},
-          ${201 - (skillsDiv.offsetTop - currentScrollPos)})`;
+        color = `rgb(${Math.floor(0 + (16/200)*(skillsDiv.offsetTop - currentScrollPos))},
+          ${Math.floor(49 + (3/200)*(skillsDiv.offsetTop - currentScrollPos))},
+          ${Math.floor(83 + (83/200)*(skillsDiv.offsetTop - currentScrollPos))})`;
       }else if(currentScrollPos >= skillsDiv.offsetTop) {
-        color = `rgb(76, 76, 201)`;
+        color = `rgb(0, 49, 83)`;
       }
 
       aboutDiv.style.background = color;
@@ -95,9 +98,7 @@ class Page extends Component {
               I'm Chris, welcome to my page!
             </Typography>
             <Typography id="about-text" className="gold" variant="body1" align="center" gutterBottom>
-        body1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos blanditiis tenetur
-        unde suscipit, quam beatae rerum inventore consectetur, neque doloribus, cupiditate numquam
-        dignissimos laborum fugiat deleniti? Eum quasi quidem quibusdam.
+        I'm an aspiring software engineer with an inclination to learn, create, and improve things, constantly.
             </Typography>
           </div>
         </div>
@@ -116,29 +117,31 @@ class Page extends Component {
           </div>
         </div>
         <div id="skills">
-          <Typography className="gold" component="h3" variant="h3" align="center" gutterBottom>
-            Skills
-          </Typography>
-          <Typography className="gold" component="h5" variant="h5" align="left" gutterBottom>
-            Education
-          </Typography>
-          <br/>
-          <div className="row">
-            <div className="language">
-              <Typography className="gold" component="h5" variant="h5" align="left" gutterBottom>
-                Languages
-              </Typography>
-              <Typography className="gold" variant="body1">
-                ummmmm idk??!
-              </Typography>
-            </div>
-            <div className="framework">
-              <Typography className="gold" component="h5" variant="h5" align="left" gutterBottom>
-                Tools/Frameworks
-              </Typography>
-              <Typography className="gold" variant="body1">
-                holy crap i said idk
-              </Typography>
+          <div id="skills-container">
+            <Typography className="gold" component="h3" variant="h3" align="center" gutterBottom>
+              Skills
+            </Typography>
+            <Typography className="gold" component="h5" variant="h5" align="left" gutterBottom>
+              Education: B.S Computer Science at University of Hawaii at Manoa
+            </Typography>
+            <br/>
+            <div className="skills-row">
+              <div className="language">
+                <Typography className="gold" component="h5" variant="h5" align="left" gutterBottom>
+                  Languages
+                </Typography>
+                <Typography className="gold" variant="body1">
+                  Javascript, Typescript, HTML, CSS, Swift, Java
+                </Typography>
+              </div>
+              <div className="framework">
+                <Typography className="gold" component="h5" variant="h5" align="left" gutterBottom>
+                  Tools
+                </Typography>
+                <Typography className="gold" variant="body1">
+                  React, GraphQL, Express, Node, Angular, Mongoose, Git
+                </Typography>
+              </div>
             </div>
           </div>
         </div>
@@ -147,7 +150,7 @@ class Page extends Component {
             Contact Me
           </Typography>
           <Typography align="center">
-            <div className="row">
+            <div className="contact-row">
               <div className="link">
                 <Link href="https://github.com/zhime" target="_blank" rel="noopener noreferrer" className="gold">
                   GitHub
