@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SimpleCard from './SimpleCard';
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
 
 class Page extends Component {
 
@@ -118,10 +119,51 @@ class Page extends Component {
           <Typography className="gold" component="h3" variant="h3" align="center" gutterBottom>
             Skills
           </Typography>
+          <Typography className="gold" component="h5" variant="h5" align="left" gutterBottom>
+            Education
+          </Typography>
+          <br/>
+          <div className="row">
+            <div className="language">
+              <Typography className="gold" component="h5" variant="h5" align="left" gutterBottom>
+                Languages
+              </Typography>
+              <Typography className="gold" variant="body1">
+                ummmmm idk??!
+              </Typography>
+            </div>
+            <div className="framework">
+              <Typography className="gold" component="h5" variant="h5" align="left" gutterBottom>
+                Tools/Frameworks
+              </Typography>
+              <Typography className="gold" variant="body1">
+                holy crap i said idk
+              </Typography>
+            </div>
+          </div>
         </div>
         <div id="contact">
           <Typography className="gold" component="h3" variant="h3" align="center" gutterBottom>
             Contact Me
+          </Typography>
+          <Typography align="center">
+            <div className="row">
+              <div className="link">
+                <Link href="https://github.com/zhime" target="_blank" rel="noopener noreferrer" className="gold">
+                  GitHub
+                </Link>
+              </div>
+              <div className="link">
+                <Link href="https://www.linkedin.com/in/christopher-oh-9a1135133/" target="_blank" rel="noopener noreferrer" className="gold">
+                  LinkedIn
+                </Link>
+              </div>
+              <div className="link">
+                <Link href="mailto:chrisoh17@yahoo.com" target="_blank" rel="noopener noreferrer" className="gold">
+                  Email
+                </Link>
+              </div>
+            </div>
           </Typography>
         </div>
       </div>
