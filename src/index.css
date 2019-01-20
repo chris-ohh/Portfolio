@@ -75,7 +75,7 @@ header a {
 #about-container {
   margin: 0 auto;
   text-align: center;
-  padding-top: 5em;
+  padding-top: 2em;
 }
 
 #about-text {
@@ -98,6 +98,7 @@ header a {
 
 .skills-row {
   width: 90vw;
+  display: flex;
 }
 
 .contact-row {

@@ -3,6 +3,11 @@ import SimpleCard from './SimpleCard';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
+/* default line height from typography headers too short for transparent text*/
+const lineHeightOverride = {
+  lineHeight: 1.4,
+};
+
 class Page extends Component {
 
   componentDidMount() {
@@ -94,7 +99,8 @@ class Page extends Component {
       <div className="page">
         <div id="about">
           <div id="about-container">
-            <Typography className="gold" component="h3" variant="h3" align="center" gutterBottom>
+            <Typography className="gold" style={lineHeightOverride}
+            component="h3" variant="h3" align="center" gutterBottom>
               I'm Chris, welcome to my page!
             </Typography>
             <Typography id="about-text" className="gold" variant="body1" align="center" gutterBottom>
@@ -104,7 +110,8 @@ class Page extends Component {
         </div>
         <div id="projects">
           <div id="card-container">
-          <Typography className="gold" component="h3" variant="h3" align="center" gutterBottom>
+          <Typography className="gold" style={lineHeightOverride} component="h3"
+          variant="h3" align="center" gutterBottom>
             Projects
           </Typography>
             <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.' url='https://github.com/zhime/Friendr'></SimpleCard>
@@ -118,7 +125,8 @@ class Page extends Component {
         </div>
         <div id="skills">
           <div id="skills-container">
-            <Typography className="gold" component="h3" variant="h3" align="center" gutterBottom>
+            <Typography className="gold"  style={lineHeightOverride}
+            component="h3" variant="h3" align="center" gutterBottom>
               Skills
             </Typography>
             <Typography className="gold" component="h5" variant="h5" align="left" gutterBottom>
@@ -146,7 +154,8 @@ class Page extends Component {
           </div>
         </div>
         <div id="contact">
-          <Typography className="gold" component="h3" variant="h3" align="center" gutterBottom>
+          <Typography className="gold" style={lineHeightOverride}
+          component="h3" variant="h3" align="center" gutterBottom>
             Contact Me
           </Typography>
           <Typography align="center">
