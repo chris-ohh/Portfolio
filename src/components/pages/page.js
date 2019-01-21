@@ -117,7 +117,7 @@ class Page extends Component {
             <SimpleCard title='Friendr' description='Tinder-like app for platonic relationships.' url='https://github.com/zhime/Friendr'></SimpleCard>
             <SimpleCard title='Techfolio Designer' description='Electron app for creating simple portfolios, primarily worked on the markdown editor' url='https://github.com/techfolios/techfoliodesigner'></SimpleCard>
             <SimpleCard title='HRS Android App' description="Directory of Hawaii's statutes. Won second place in Hawaii's Annual Code Challenge" url='https://github.com/zhime/Friendr'></SimpleCard>
-            <SimpleCard title='React Chat App' description='Simple chat webapp built with react and express.' url='https://github.com/zhime/react-chat-app'></SimpleCard>
+            <SimpleCard title='React Chat App' description='Simple chat webapp built with react and express. Check it out here: https://react-chat-app-simple.herokuapp.com' url='https://github.com/zhime/react-chat-app'></SimpleCard>
             <SimpleCard title='GraphQL todo' description='GraphiQL client that executes GraphQL queries' url='https://github.com/zhime/GraphQL-Angular-ToDo'></SimpleCard>
             <SimpleCard title='StickAR' description='iOS App that replaces QR codes with images from links' url='https://github.com/jlarobello/StickAR'></SimpleCard>
             <SimpleCard title='ADDTube' description='Youtube distraction blocking userscript' url='https://github.com/zhime/ADDTube'></SimpleCard>
