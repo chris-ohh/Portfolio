@@ -13,6 +13,9 @@ const styles = {
     height: 230,
     margin: 10,
     display: 'inline-block',
+    background: 'rgb(176, 191, 198)',
+    verticalAlign: 'top',
+    position: 'relative',
   },
   bullet: {
     display: 'inline-block',
@@ -20,10 +23,14 @@ const styles = {
     transform: 'scale(0.8)',
   },
   title: {
-    fontSize: 14,
+    marginBottom: 12,
   },
   pos: {
     marginBottom: 12,
+  },
+  button: {
+    position: 'absolute',
+    bottom: 12,
   },
 };
 
@@ -37,7 +44,7 @@ function SimpleCard(props) {
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Typography variant="h5" component="h2">
+        <Typography className={classes.title} variant="h5" component="h2">
           {title}
         </Typography>
         <Typography component="p">
@@ -45,7 +52,7 @@ function SimpleCard(props) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small" onClick={buttonClick}>Link</Button>
+        <Button className={classes.button} size="small" onClick={buttonClick}>Link</Button>
       </CardActions>
     </Card>
   );
