@@ -166,7 +166,7 @@ class Page extends Component {
                 </Link>
               </div>
               <div className="link">
-                <Link href="https://www.linkedin.com/in/christopher-oh-9a1135133/" target="_blank" rel="noopener noreferrer" className="gold">
+                <Link href="https://www.linkedin.com/in/christopher-oh" target="_blank" rel="noopener noreferrer" className="gold">
                   LinkedIn
                 </Link>
               </div>
