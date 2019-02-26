@@ -161,7 +161,7 @@ class Page extends Component {
           <Typography align="center">
             <div className="contact-row">
               <div className="link">
-                <Link href="https://github.com/zhime" target="_blank" rel="noopener noreferrer" className="gold">
+                <Link href="https://github.com/chris-ohh" target="_blank" rel="noopener noreferrer" className="gold">
                   GitHub
                 </Link>
               </div>
